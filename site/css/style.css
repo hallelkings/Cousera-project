@@ -1,0 +1,86 @@
+	/* #### Base styles #### */		
+	* {box-sizing: border-box;}	
+	body {background-color: black;
+		font-family: Arial, Helvetica, San-serif;}
+	body a{color: black;
+		background-color: orange;}
+	div p {color: gray;}
+	#headerandfooter{color: gray;}	
+	#top {color: orange;
+		text-align: center;
+		margin-top: 3px;
+		margin-bottom: 3%;}
+	.mainPoint {color: orange;
+		text-align: justify-all;
+		padding: 3%;
+		margin: 2% 2% 2% 2%
+		width: 33%;
+		top: 0;}	
+	.aboutus {color: gray;
+		opacity: 0.4;
+		text-align: left;
+		font-weight: bold;
+		font-size: 100%;
+		width: 40%;
+		text-align: left;
+		clear: right;}
+	a:hover, a:active {background-color: gray;
+		color: blue;}
+	/**.contentbox {background-color: gray;
+		text-align: justify;
+		margin: 10px 10px 10px 10px;
+		width: 33%;
+		height: 10%;
+		overflow: scroll;}**/
+	.logo {text-align: right;
+		width: 6px;}
+	div img	{clear: both;}
+		/* #### Small devices #### */
+@media screen and (min-device-width: 667px) and (max-device-width: 320px) {.port-dev1, .port-dev2, .port-dev3, .port-dev4, .port-dev5, .port-dev6, .port-dev7, .port-dev8, .port-dev9, .port-dev10, .port-dev11, .port-dev12 
+{float: left;}
+.port-dev1 {width: 8.33%;}
+.port-dev2 {width: 16.66%;}
+.port-dev3 {width: 25%;}
+.port-dev4 {width: 33%;}
+.port-dev5 {width: 41.66%;}
+.port-dev6 {width: 50%;}
+.port-dev7 {width: 58.33%;}
+.port-dev8 {width: 66.66%;}
+.port-dev9 {width: 74.99%;} 
+.port-dev10 {width: 83.33%;}
+.port-dev11 {width: 91.66%;}
+.port-dev12 {width: 100%;}
+}
+/* #### Medium devices #### */
+@media screen and (min-device-width: 668px) and (max-device-width: 1024px) {.med-dev1, .med-dev2, .med-dev3, .med-dev4, .med-dev5, .med-dev6, .med-dev7, .med-dev8, .med-dev9, .med-dev10, .med-dev11, .med-dev12
+{float: left;}
+.med-dev1 {width: 8.33%;}
+.med-dev2 {width: 16.66%;}
+.med-dev3 {width: 25%;}
+.med-dev4 {width: 33%;}
+.med-dev5 {width: 41.66%;}
+.med-dev6 {width: 50%;}
+.med-dev7 {width: 58.33%;}
+.med-dev8 {width: 66.66%;}
+.med-dev9 {width: 74.99%;} 
+.med-dev10 {width: 83.33%;}
+.med-dev11 {width: 91.66%;}
+.med-dev12 {width: 100%;}
+}
+
+/* #### Large devices #### */
+@media screen and (min-width: 1025px) {.lar-dev1, .lar-dev2, .lar-dev3, .lar-dev4, .lar-dev5, .lar-dev6, .lar-dev7, .lar-dev8, .lar-dev9, .lar-dev10, .lar-dev11, .lar-dev12 
+{float: left;}
+.lar-dev1 {width: 8.33%;}
+.lar-dev2 {width: 16.66%;}
+.lar-dev3 {width: 25%;}
+.lar-dev4 {width: 33%;}
+.lar-dev5 {width: 41.66%;}
+.lar-dev6 {width: 50%;}
+.lar-dev7 {width: 58.33%;}
+.lar-dev8 {width: 66.66%;}
+.lar-dev9 {width: 74.99%;} 
+.lar-dev10 {width: 83.33%;}
+.lar-dev11 {width: 91.66%;}
+.lar-dev12 {width: 100%;}
+}
