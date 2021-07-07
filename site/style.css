@@ -1,29 +1,32 @@
 	/* #### Base styles #### */		
 	* {box-sizing: border-box;}	
-	body {background-color: black;
+	body {
 		font-family: Arial, Helvetica, San-serif;}
 	body a{color: black;
 		background-color: orange;}
 	div p {color: gray;}
-	#headerandfooter{color: gray;}	
+	#headerandfooter{color: black;}	
 	#top {color: orange;
 		text-align: center;
 		margin-top: 3px;
 		margin-bottom: 3%;}
-	m.mainpoint {color: orange;
+	.mainpoint {color: orange;
 		text-align: justify-all;
-		padding: auto;
-		margin: auto;
+		padding: 3px;
+		margin: 1%;
 		width: auto;
-		top: 0;}	
-	.aboutus {color: gray;
-		opacity: 0.4;
-		text-align: left;
+		top: 0;
+		background-color: blue;
+		border: 1px solid black;}	
+	.aboutus {color: black;
+		text-align: right;
 		font-weight: bold;
 		font-size: 100%;
-		width: 40%;
-		text-align: left;
-		clear: right;}
+		width: auto;
+		background: blue 100px;
+		border: 1px solid black;
+		padding: 1%;
+		}
 	a:hover, a:active {background-color: gray;
 		color: blue;}	
 	/**.contentbox {background-color: gray;
