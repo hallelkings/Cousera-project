@@ -12,9 +12,8 @@
 		margin-bottom: 3%;}
 	.mainpoint {color: orange;
 		text-align: justify-all;
-		padding: 3px;
+		padding: 10px;
 		margin: 1%;
-		width: auto;
 		top: 0;
 		background-color: blue;
 		border: 1px solid black;}	
@@ -22,10 +21,10 @@
 		text-align: right;
 		font-weight: bold;
 		font-size: 100%;
-		width: auto;
-		background: blue 100px;
+		background: blue;
 		border: 1px solid black;
 		padding: 1%;
+		border-left:
 		}
 	a:hover, a:active {background-color: gray;
 		color: blue;}	
