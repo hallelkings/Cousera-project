@@ -4,24 +4,24 @@
 		font-family: Arial, Helvetica, San-serif;}
 	body a{color: black;
 		background-color: orange;}
-	div p {color: gray;}
+	/**div p {color: gray;}**/
 	#headerandfooter{color: black;}	
 	#top {color: orange;
 		text-align: center;
 		margin-top: 3px;
 		margin-bottom: 3%;}
-	.mainpoint {color: orange;
+	.mainpoint {color: black;
 		text-align: justify-all;
 		padding: 10px;
 		margin: 1%;
 		top: 0;
-		background-color: blue;
+		background-color: gray;
 		border: 1px solid black;}	
 	.aboutus {color: black;
 		text-align: right;
 		font-weight: bold;
-		font-size: 100%;
-		background: blue;
+		font-size: 150%;
+		background: gray;
 		border: 1px solid black;
 		padding: 1%;
 		border-left:
