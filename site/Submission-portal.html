@@ -12,6 +12,21 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- PRELOADER -->
+<div id="loader" class="container">
+  <div class="spinner-wrapper">
+ <div class="spinner">
+  <div class="sk-folding-cube">
+   <div class="sk-cube1 sk-cube"></div>
+   <div class="sk-cube2 sk-cube"></div>
+   <div class="sk-cube4 sk-cube"></div>
+   <div class="sk-cube3 sk-cube"></div>
+  </div>
+ </div>
+</div>
+<h4>Loading...</h4>
+<h2>KINGS MUSIC</h2>
+</div>
 
 <!-- START NAV-BAR HEADER -->	
 <header>
@@ -21,9 +36,9 @@
 			<a href="kings_music.jpg" class="pull-left visible-md visible-lg">
 				<img src="kings_music.jpg" height="70" width="70" alt="logo_img"></a>
 		</div>	
-		<div id="headerandfooter">Welcome to the Official Website of The Kings Music</div>
+		<div id="headerandfooter">Welcome to the Official Website of Hallel Kings</div>
 		<div id="quote">&quot;Oh Happy Day!&quot;<div>
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+		<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
 		<span class="sr-only">Toggle navigation</span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
@@ -35,7 +50,7 @@
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Features/Mashups/Remixes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="follow-us.html">Follow Us</a>
@@ -69,125 +84,134 @@
 <!-- END NAV-BAR HEADER -->
 
 <!--- START BODY --->
-<h2 class="text-center" id="category-title">Submission Portal</h2>
-<div><p class="container-fluid"><a href="index.html" title="home">Back to Homepage page.</a></div>
 <div id="main-content" class="container">
+  <h2 class="text-center" id="category-title">Submission Portal</h2>
+<div><p class="container-fluid"><a href="index.html" title="home">Back to Homepage page.</a></div>
   <div class="jumbotron">
     <img src="music-submission.jpg" width="100%" alt="studio"
     class="img-responsive">
   </div>
 </div>
 <h3>
-	Wanna get your song featured on our playlist, channel and website?
-Submit your song by filling the form below, clicking on the "upload your song here" button, and submitting it, to get it reviewed by our curators.
+  Wanna get your song featured on our playlist, channel or website?
+Submit your song by clicking on the "upload your song here" button, filling the form below, and submitting it via the "Submit" button. After submission, it'll reviewed by our curators.
 </h3>
-	<ul class="note-list">NOTE: 
-		<li>
-			Please do not submit your song twice. Submitting your song once is ok and would be reviewed by our curators after submission.
-		</li>
-		<li>
-			Only WAV and 320kbps MP3 is accepted for upload. All other formats are unaccepted.
-		</li>
-	</ul>
+  <ul class="note-list">NOTE: 
+    <li>
+      Please do not submit your song twice. Submitting your song once is ok and would be reviewed by our curators after submission.
+    </li>
+    <li>
+      Only WAV and 320kbps MP3 is accepted for upload. All other formats are unaccepted.
+    </li>
+  </ul>
+<div>
+  <label for="file" class="text-center upload-btn">
+  <input type="file" id="file" accept=".mp3, .wav">
+    <span>
+    <img src="upload.png">
+    upload your song here
+    </span>
+  </label>
+</div>  
   <section class="visible-lg visible-md">
-<div class="inner big-input">
+<form class="inner big-input">
 <h3 class="feedback-header">SONG INFO</h3>
-<h5>Song title</h5>
+<h5>Song title<span id="compulsory">*</span></h5>
 <div>
-<input type="email" name="Name" label="Name" class="input-box">
+<input type="text" name="Name" label="name" class="input-box" id="song-name">
 </div>
-<h5>Artist</h5>
+<h5>Artist<span id="compulsory">*</span></h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="artist-name">
 </div>
 <h5>Featured Artist(s) (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="featured-artist">
 </div>
-<h5>Genre(s)</h5>
+<h5>Genre(s)<span id="compulsory">*</span></h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="genre">
 </div>
 <h5>Facebook (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="facebook-id">
 </div>
 <h5>YouTube (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="youtube-id">
 </div>
 <h5>Spotify (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="spotify-id">
 </div>
 <h5>Instagram (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="instagram-id">
 </div>
-<h5>Message for the Curators</h5>
+<h5>Message for the Curators (optional)</h5>
 <div>
-<input type="message" name="Message" label="Message" class="input-box">
+<input type="message" name="Message" label="Message" class="input-box" id="curator-message">
 </div>
-<button class="submit-button">Done</button>
-</div>
+  <div>
+    <button id="submit-song" class="btn btn-secondary form-btn">
+    submit
+  </button>
+  </div>
+</form>
 </section>
   <section class="input visible-sm visible-xs">
-<div class="inner">
+<form class="inner">
 <h3 class="feedback-header">SONG INFO</h3>
-<h5>Song title</h5>
+<h5>Song title<span id="compulsory">*</span></h5>
 <div>
-<input type="email" name="Name" label="Name" class="input-box">
+<input type="email" name="Name" label="Name" class="input-box" id="song-name">
 </div>
-<h5>Artist</h5>
+<h5>Artist<span id="compulsory">*</span></h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="artist-name">
 </div>
 <h5>Featured Artist(s) (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="featured-artist">
 </div>
-<h5>Genre(s)</h5>
+<h5>Genre(s)<span id="compulsory">*</span></h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="genre">
 </div>
 <h5>Facebook (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="facebook-id">
 </div>
 <h5>YouTube (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="youtube-id">
 </div>
 <h5>Spotify (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="spotify-id">
 </div>
 <h5>Instagram (optional)</h5>
 <div>
-<input type="name" name="Name" label="Name" class="input-box">
+<input type="name" name="Name" label="Name" class="input-box" id="instagram-id">
 </div>
-<h5>Message for the Curators</h5>
+<h5>Message for the Curators (optional)</h5>
 <div>
-<input type="message" name="Message" label="Message" class="input-box">
+<input type="message" name="Message" label="Message" class="input-box" id="curator-message">
 </div>
-<button class="submit-button">Done</button>
-</div>
-</section>
-<div>
-	<input type="file" id="file" accept=".mp3, .wav">
-	<label for="file" class="text-center">
-		<span>
-		<img src="upload.png">
-		upload your song here
-		</span>
-	</label>
-</div>
-<div>
-  <button id="submit-btn" type="button" class="btn btn-secondary">
-      <a href="#" target="_blank" id="email">Submit</a>
+  <div>
+    <button id="submit-song" class="btn btn-secondary form-btn">
+      submit
     </button>
+  </div>
+</form>
+</section>
 </div>
--<!--- END BODY --->
+<div>
+  <div>
+    Title: 
+  </div>
+</div>
+<!--- END BODY --->
 
 <!--- START FOOTER --->
 <footer class="panel-footer">
@@ -218,6 +242,7 @@ Submit your song by filling the form below, clicking on the "upload your song he
 
 <script src="js/jQuery-3.6.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/ajaxUtilities.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>	

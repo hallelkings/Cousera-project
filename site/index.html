@@ -12,6 +12,21 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- PRELOADER -->
+<div id="loader" class="container">
+  <div class="spinner-wrapper">
+ <div class="spinner">
+  <div class="sk-folding-cube">
+   <div class="sk-cube1 sk-cube"></div>
+   <div class="sk-cube2 sk-cube"></div>
+   <div class="sk-cube4 sk-cube"></div>
+   <div class="sk-cube3 sk-cube"></div>
+  </div>
+ </div>
+</div>
+<h4>Loading...</h4>
+<h2>KINGS MUSIC</h2>
+</div>
 
 <!-- START NAV-BAR HEADER -->	
 <header>
@@ -21,9 +36,9 @@
 			<a href="kings_music.jpg" class="pull-left visible-md visible-lg">
 				<img src="kings_music.jpg" height="70" width="70" alt="logo_img"></a>
 		</div>	
-		<div id="headerandfooter">Welcome to the Official Website of The Kings Music</div>
+		<div id="headerandfooter">Welcome to the Official Website of Hallel Kings</div>
 		<div id="quote">&quot;Oh Happy Day!&quot;<div>
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+		<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
 		<span class="sr-only">Toggle navigation</span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
@@ -32,31 +47,31 @@
 	<div id="collapsable-nav" class="collapse navbar-collapse">
       <ul id="nav-list" class="nav navbar-nav navbar-right">
         <li class="nav-item active">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.html" id="home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="features.html" id="features">Features/Mashups/Remixes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="follow-us.html">Follow Us</a>
+          <a class="nav-link" href="follow-us.html" id="follow-us">Follow Us</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">How We Started</a>
+          <a class="nav-link" href="how-we-started.html" id="started">How We Started</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">Our Timeline</a>
+          <a class="nav-link" href="our-timeline.html" id="our-timeline">Our Timeline</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled visible-lg visible-md" href="https://hallelkings@gmail.com" tabindex="-1" aria-disabled="true">Email</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link visible-lg visible-md" href="Submission-portal.html">Submission Portal</a>
+          <a class="nav-link visible-lg visible-md" href="Submission-portal.html" id="Submission-portal">Submission Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link visible-lg visible-md" href="fan-page.html">Fan Page</a>
+          <a class="nav-link visible-lg visible-md" href="fan-page.html" id="fan-page">Fan Page</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link visible-lg visible-md" href="songs.html">Songs</a>
+          <a class="nav-link visible-lg visible-md" href="songs.html" id="songs.html">Songs</a>
         </li>
       </ul>
   	</div>
@@ -69,42 +84,59 @@
 <!-- END NAV-BAR HEADER -->
 
 <!--- START BODY --->
-<h1 id="top">KINGS MUSIC ENTERTAINMENT
-</h1>
 <div id="main-content" class="container">
-	<div class="jumbotron">
-		<img src="Studio.jpg" alt="studio"
-		class="img-responsive">
-	</div>
+  <h1 id="top">KINGS MUSIC ENTERTAINMENT
+</h1>
+  <div class="jumbotron">
+    <img src="Studio.jpg" alt="studio"
+    class="img-responsive">
+  </div>
 </div>
-<div class="aboutus" id="topic1">About Us
-</div>
-<div class="mainpoint ">
-	<p class="">Kings Music is a Nigerian Music Channel founded by Hallel Kings in the year 2021. They are versatile when it comes to Music production, which ranges from EDM to Pop to Afropop etc. Their songs are usually identified with emotional melodies usually made with the guitar or piano, flowing rythm, and a bit of African vibe to some of their songs. The songs uploaded on their YouTube Channel also includes those made by talented Musicians, Producers, Songwriters, Remixers and the likes.</p>
-</div>
-<div class="aboutus" id="topic2">How We Started
+<div class="aboutus" id="topic1">About Him
 </div>
 <div class="mainpoint ">
-	<p class="">Before the founding of Kings Music, the founder of this Channel/Label (Hallel Kings) who was a beatmaker, made a statistic and found out that there are many aspiring, talented musicians out there who do not have sufficient fund/money to pursue their dreams. So he decided to do what he could to put an end to that. He decided not to sell his Beats/Instrumentals anymore (It's not for free either), but to use them in supporting talented upcoming artistes and the likes with no funds. He made a strategy by uploading those Instrumentals to his YouTube Channel and other streaming Platforms, thereby indicating that they could be used by any interested artiste, only if they can write a song to it, record it (the quality of the recording does not matter initially), and mail it to the channel's official e-mail address. The artiste with the best written song will then be accepted to work with on that particular instrumental, with him/her spending $0.00 on the project. So with that project in mind, the Label/Channel was born.</p>
+  <p class="">Hallel Kings is a Nigerian DJ, Music Producer, Web Developer and Artiste. He is versatile when it comes to Music production, which ranges from EDM to Pop to Afropop etc. His tracks are usually identified with emotional melodies usually made with the guitar or piano, flowing rythm, and a bit of African vibe to some of his songs. The songs uploaded on his Social Media Accounts/Pages also includes Remixes, Mashups and Collabs.</p>
+</div>
+<div class="aboutus" id="topic2">How He Started
+</div>
+<div class="mainpoint ">
+  <p class="">Before Hallel Kings became an Official Artiste, he started as a beatmaker at the age of sixteen (an inexperienced one at that, lol). He was a big fan of Electronic House songs and EDM and his biggest role model was Avicii, who inspired him alot into dabbling with electronic sounds.</p>
 </div>
 <div class="aboutus" id="topic3">Our Timeline
 </div>
-<div>	
-</div>
+
+
+<!-- The code below is just for testing and experimentation of JavaScript's Ajax and JSON, and is not part of the main source code for this webpage -->
+
+
+<!--<div>
+  Artiste Name  
+  <div>
+    <input type="name" name="Name" id="Artiste-name">
+  </div>
+  <div>
+    <button id="artisteName" class="submit-button">Say your Name</button>
+  </div>
+  <div id="artisteProfile"></div>
+</div>-->
+
+
+<!-- End of code experimentation -->
+
 
 <div>
-	<img src="" height="250" width="400" alt="">
+  <img src="" height="250" width="400" alt="">
 </div>
 <div>
-	<p id="go-to">Wanna see Feedback page? click
-		<a href="#" title="Leave Feedback" class="link">here</a> to view
-	</p>
+  <p id="go-to">Noticed a bug, an error or a broken link? please click
+    <a href="feedback.html" title="Leave Feedback" class="link">here</a> to notify us
+  </p>
 </div>
 <div>
-	<a href="http://facebook.com/kingsmusictv" target="_blank" title="Please don't forget to leave a like" class="link">Facebook Page</a>
+  <a href="http://facebook.com/kingsmusictv" target="_blank" title="Please don't forget to leave a like" class="link">Facebook Page</a>
 </div>
 <div>
-	<a href="index.html" title="Top of the page">Back to top</a>
+  <a href="index.html" title="Top of the page">Back to top</a>
 </div>
 -<!--- END BODY --->
 
@@ -113,16 +145,16 @@
   <div class="container">
     <div class="row">
     <section id="submit" class="col-sm-4 visible-sm visible-xs">
-      <span><a href="Submission-portal.html">SUBMISSION PORTAL</a></span>
+      <span><a href="Submission-portal.html" id="Submission-portal">SUBMISSION PORTAL</a></span>
       <hr class="visible-xs">
     </section>
     <section id="fan" class="col-sm-4 visible-sm visible-xs">
-      <span><a href="fan-page.html">FAN PAGE</a></span>
+      <span><a href="fan-page.html" id="fan-page">FAN PAGE</a></span>
       <hr class="visible-xs">
     </section>
     <section id="songs" class="col-sm-4 visible-sm visible-xs">
       <div>
-      <span><a href="songs.html">SONGS</a></span>
+      <span><a href="songs.html" id="songs">SONGS</a></span>
       <hr class="visible-xs">
     </div>
     </section>
@@ -137,6 +169,7 @@
 
 <script src="js/jQuery-3.6.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/ajaxUtilities.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

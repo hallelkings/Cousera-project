@@ -227,3 +227,190 @@
 // for (var i = 0; i < names.length; i++) {
 // 	console.log("Hello " + names[i])
 // }
+
+// AJAX AND JSON
+// This code is being used to test Ajax and JSON on the Home Page of this website (index.html)
+// var completer = 1;
+// var artisteProfile =document.getElementById("artisteProfile")
+// var btn = document.getElementById("artisteName")
+
+// btn.addEventListener("click", function () 
+// 		{
+// 		var request = new XMLHttpRequest();
+// 		request.open('GET', 'js/artisteInf' + completer + '.json');
+// 		request.onload = function () {
+// 			var ourData = JSON.parse(request.responseText);
+// 			renderedHTML(ourData);
+// 		}
+// 		request.send();	
+// 		completer++
+// 		if (completer > 1) {
+// 			btn.classList.add("hide-me");
+// 		}
+// 	}
+// )
+
+// function renderedHTML(data) {
+// 	var testingString = ""
+// 	for (i = 0; i< data.length; i++) {
+// 		testingString += "<p>" + data[i].name + " is " + data[i].age + " years old and " + data[i].favoriteColor + " is his favorite color" + "</p>"
+// 	}
+// 	artisteProfile.insertAdjacentHTML('beforeend', testingString)
+// }
+
+// TESTING ONLINE/OFFLINE STATUS
+// if (navigator.onLine) {
+// 	console.log("I am online")
+// } 
+// else {console.log("I am offline")};
+
+
+//** W E B   S C R I P T  -  B E G I N S **//
+
+
+// PRE-REQUISITES
+
+/*Preloader - Begins*/
+document.addEventListener("DOMContentLoaded", 
+	function (event) {
+		function hideLoader() {
+				$('#loader').hide();
+			}
+
+		$(window).ready(hideLoader);
+
+		setTimeout(hideLoader, 20 * 1000);
+	}
+);
+/*Preloader - Ends*/
+
+// START HEADER
+
+/*Fixing Mobile Nav Menu collapse - Begins*/
+
+$(function () { //Same as document.addEventListener("DOMContentLoaded", ...) 
+
+	// Same as document.querySelector("#navbar-toggle").addEventListener("blur", ...) 
+	$("#navbarToggle").blur(function (event) {
+		var screenwidth = window.innerWidth;
+		if (screenwidth < 768) {
+			$("#collapsable-nav").collapse('hide')
+		}
+	});
+
+	// In Firefox and Safari, the click event doesn't retain the focus
+  // on the clicked button. Therefore, the blur event will not fire on
+  // user clicking somewhere else in the page and the blur event handler
+  // which is set up above will not be called.
+   // Solution: force focus on the element that the click event fired on
+	$("#navbarToggle").click(function (event) {
+    $(event.target).focus();
+  });
+});
+
+/*Fixing Mobile Nav Menu Collapse - Ends*/
+
+
+// START BODY
+
+/*Fan Feedback Page Form - Begins*/
+
+// DOM
+// console.log(document.getElementById("top"))
+// console.log(document instanceof HTMLDocument)
+document.addEventListener("DOMContentLoaded", 
+	function (event) {
+		function loveForm (event) {
+	if (document.getElementById("me").value === null || document.getElementById("me").value === "") {
+		alert("Please input your name");
+		event.preventDefault();
+		return(false);
+	} 
+	else if (document.getElementById("message").value === null || document.getElementById("message").value === "") {
+		alert("Please input your message");
+		event.preventDefault();
+		return(false);
+	}
+	// Form Validation - Ends
+
+	this.textContent = "submitted";
+
+	notif = document.getElementById("notif");
+
+	if (navigator.onLine === true) {
+		notif.classList.add("submitted-notif");
+		notif.innerHTML = "sent";
+		// document.querySelector(".inner").action = "https://formspree.io/f/xnqwakal";
+		// console.log("I am Online")
+	} 
+	else {
+		notif.classList.add("not-submitted-notif");
+		notif.innerHTML = 'not sent';
+		// document.querySelector(".inner").action = null;
+		// console.log("I am not Online")
+	};
+
+	var messageForm =
+		document.getElementById("input");
+
+	messageForm.classList.add("hide-me")
+
+	var name = 
+		document.getElementById("me").value;
+	var messageName = name;
+		document.getElementById("fan-name").innerHTML = messageName;
+	
+	var mail = 
+		document.getElementById("mail").value;
+	var messageMail = mail;
+		document.getElementById("fan-mail").innerHTML = messageMail;
+
+	var message = 
+		document.getElementById("message").value;
+	var messageContent = message;
+		document.getElementById("fan-content").innerHTML = messageContent;
+
+	var prefix = 
+		document.getElementById("prefix");
+		prefix.innerHTML = "Message: "
+
+	event.preventDefault("onSubmit");
+		}
+
+	// UNOBTRUSIVE EVENT BINDING
+	document.querySelector("#submit-message").addEventListener("click", loveForm);
+	document.querySelector("#submit-message").addEventListener("onSubmit", loveForm);
+	}
+);
+
+/*Fan Feedback Page Form - Ends*/
+
+/*Music Submission Form - Begins*/
+
+document.addEventListener("DOMContentLoaded", 
+	function (event) {
+		function songSubmission (event) {
+			// Form Validation - Begins
+			if (document.getElementById("song-name").value === null || document.getElementById("song-name").value === "") {
+				alert("Please input the Title of your Track");
+				event.preventDefault();
+				return(false);	
+			}
+			else if (document.getElementById("artist-name").value === null || document.getElementById("artist-name").value === "") {
+				alert("Please input the Stage Name of you or the Artist you're Legally representing");
+				event.preventDefault();
+				return(false);
+			}
+			// Form Validatio - Ends
+			songBox = document.querySelector("inner")
+			inner.classList.add("hide-me")
+			event.preventDefault();
+		}
+
+	// UNOBTRUSIVE EVENT BINDING
+	document.querySelector("#submit-song").addEventListener("click", songSubmission);
+	document.querySelector("#submit-song").addEventListener("onSubmit", songSubmission);
+	}
+);
+/*Music Submission Form - rEnd*/
+
