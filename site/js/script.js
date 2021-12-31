@@ -284,6 +284,17 @@ document.addEventListener("DOMContentLoaded",
 );
 /*Preloader - Ends*/
 
+/* Scroll To Top Button - Begins */
+document.getElementById("backTotop").addEventListener("click", 
+	function (event) {
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: 'smooth'
+		});
+	});
+/* Scroll To Top Button - Ends */
+
 // START HEADER
 
 /*Fixing Mobile Nav Menu collapse - Begins*/
@@ -310,17 +321,19 @@ $(function () { //Same as document.addEventListener("DOMContentLoaded", ...)
 
 /*Fixing Mobile Nav Menu Collapse - Ends*/
 
+// END HEADER
 
 // START BODY
 
 /*Fan Feedback Page Form - Begins*/
 
-// DOM
 // console.log(document.getElementById("top"))
 // console.log(document instanceof HTMLDocument)
 document.addEventListener("DOMContentLoaded", 
 	function (event) {
 		function loveForm (event) {
+
+	//  Form Validation - Begins
 	if (document.getElementById("me").value === null || document.getElementById("me").value === "") {
 		alert("Please input your name");
 		event.preventDefault();
@@ -338,17 +351,18 @@ document.addEventListener("DOMContentLoaded",
 	notif = document.getElementById("notif");
 
 	if (navigator.onLine === true) {
+		document.querySelector(".inner").action = "https://formspree.io/f/xnqwakal";
 		notif.classList.add("submitted-notif");
 		notif.innerHTML = "sent";
-		// document.querySelector(".inner").action = "https://formspree.io/f/xnqwakal";
-		// console.log("I am Online")
+		console.log("I am Online");
 	} 
 	else {
 		notif.classList.add("not-submitted-notif");
 		notif.innerHTML = 'not sent';
-		// document.querySelector(".inner").action = null;
-		// console.log("I am not Online")
-	};
+		document.querySelector(".inner").action = null;
+		console.log("I am not Online")
+		event.preventDefault();
+	}
 
 	var messageForm =
 		document.getElementById("input");
@@ -373,8 +387,6 @@ document.addEventListener("DOMContentLoaded",
 	var prefix = 
 		document.getElementById("prefix");
 		prefix.innerHTML = "Message: "
-
-	event.preventDefault("onSubmit");
 		}
 
 	// UNOBTRUSIVE EVENT BINDING
@@ -393,18 +405,88 @@ document.addEventListener("DOMContentLoaded",
 			// Form Validation - Begins
 			if (document.getElementById("song-name").value === null || document.getElementById("song-name").value === "") {
 				alert("Please input the Title of your Track");
-				event.preventDefault();
-				return(false);	
+				 	
 			}
 			else if (document.getElementById("artist-name").value === null || document.getElementById("artist-name").value === "") {
 				alert("Please input the Stage Name of you or the Artist you're Legally representing");
 				event.preventDefault();
 				return(false);
 			}
-			// Form Validatio - Ends
+			else if (document.getElementById("genre").value === null || document.getElementById("genre").value === "") {
+				alert("Please input your genre");
+				event.preventDefault();
+				return(false);
+			} 
+			else if (document.getElementById("file").value === null || document.getElementById("file").value === "") {
+				alert("No file uploaded");
+				event.preventDefault();
+				return(false)
+			};
+			// Form Validation - Ends
 			songBox = document.querySelector("inner")
 			inner.classList.add("hide-me")
 			event.preventDefault();
+
+			var songName = 
+				document.getElementById("song-name").value;
+			var songTitle = songName;
+				document.getElementById("song-title").innerHTML = songTitle;
+
+			var artist = 
+				document.getElementById("artist-name").value;
+			var artiste = artist;
+				document.getElementById("artiste-name").innerHTML = artiste;
+
+			var featuredArtist = 
+				document.getElementById("featured-artist").value;
+			var featuredArtiste = featuredArtist;
+				if (document.getElementById("featured-artist").value === null || document.getElementById("featured-artist").value === "") {
+					document.getElementById("featured-artiste").innerHTML = featuredArtiste;
+				} 
+				else {document.getElementById("featured-artiste").innerHTML = " ft " + featuredArtiste};
+
+			var genre = 
+				document.getElementById("genre").value;
+			var songGenre = genre;
+				document.getElementById("song-genre").innerHTML = songGenre;
+
+			var facebook = 
+				document.getElementById("facebook-id").value;
+			var facebookId = facebook;
+				document.querySelector(".facebook").innerHTML = facebookId;
+
+			var youtube = 
+				document.getElementById("youtube-id").value;
+			var youtubeId = youtube;
+				document.querySelector(".youtube").innerHTML = youtubeId;
+			
+			var spotify = 
+				document.getElementById("spotify-id").value;
+			var spotifyId = spotify;
+				document.querySelector(".spotify").innerHTML = spotifyId;
+
+			var instagram = 
+				document.getElementById("instagram-id").value;
+			var instagramId = instagram;
+				document.querySelector(".instagram").innerHTML = instagramId;
+
+			var curatorsMessage = 
+				document.getElementById("curator-message").value;
+			var messageForcurators = curatorsMessage;
+				document.getElementById("curators-message").innerHTML = messageForcurators;
+				if (document.getElementById("curator-message").value === null || document.getElementById("curator-message").value === "") {
+					document.getElementById("prefix").innerHTML = ""
+				} 
+				else {document.getElementById("prefix").innerHTML = "Message:"};
+
+			if (navigator.onLine === true) {
+				document.getElementById("notif").innerHTML = "sent"
+				document.getElementById("notif").classList.add("submitted-notif")
+			} 
+			else {
+				document.getElementById("notif").innerHTML = "not sent"
+				document.getElementById("notif").classList.add("not-submitted-notif")
+			}
 		}
 
 	// UNOBTRUSIVE EVENT BINDING
@@ -412,5 +494,11 @@ document.addEventListener("DOMContentLoaded",
 	document.querySelector("#submit-song").addEventListener("onSubmit", songSubmission);
 	}
 );
+
+songBox = document.querySelector(".inner")
+if (window.innerWidth < 992) {
+	songBox.classList.add("input")
+}
+else {songBox.classList.add("big-input")};
 /*Music Submission Form - rEnd*/
 

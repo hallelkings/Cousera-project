@@ -266,6 +266,25 @@ h2 {
 	#fan-content-box {
 		margin-bottom: 100px;
 	}
+	#submission-content-box {
+		margin-bottom: 100px;
+	}
+	#song-title {margin: 20px 0px 0px 15px;
+		font-size: 25px;
+		font-weight: bold;}
+	#artiste-name {margin-left: 20px;
+		margin-bottom: 5px;}
+	#featured-artiste {margin-bottom: 5px;}
+	#ft {margin-left: 20px;
+		margin-bottom: 5px;}
+	#curators-message {margin-left: 20px;
+		font-size: 15px;
+		font-weight: bold;}
+	#song-genre {margin-left: 20px;
+		font-size: 15px;
+		font-weight: bold;}
+	#link {margin-left: 20px;
+		font-size: 15px;}
 	#compulsory {color: red;
 		font-weight: bolder;}
 	.submitted-notif {
@@ -296,6 +315,11 @@ h2 {
 		overflow: scroll;}**/
 
 	.hide-me {display: none;}
+	#backTotop {
+		position: fixed;
+		border: none;
+		right: 7px;
+		bottom: 30px;}
 
 /** END BODY **/
 

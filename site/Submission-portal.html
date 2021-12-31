@@ -33,8 +33,8 @@
 <nav id="header-nav" class="navbar navbar-default">
 	<div id="container-fluid">
 		<div class="navbar-header">
-			<a href="kings_music.jpg" class="pull-left visible-md visible-lg">
-				<img src="kings_music.jpg" height="70" width="70" alt="logo_img"></a>
+			<a href="index.html" class="pull-left visible-md visible-lg">
+				<img src="img/kings_music.jpg" height="70" width="70" alt="logo_img"></a>
 		</div>	
 		<div id="headerandfooter">Welcome to the Official Website of Hallel Kings</div>
 		<div id="quote">&quot;Oh Happy Day!&quot;<div>
@@ -86,9 +86,10 @@
 <!--- START BODY --->
 <div id="main-content" class="container">
   <h2 class="text-center" id="category-title">Submission Portal</h2>
-<div><p class="container-fluid"><a href="index.html" title="home">Back to Homepage page.</a></div>
+<div><p class="container-fluid"><a href="index.html" title="home">Back to Homepage page.</a></p></div>
+  <button id="backTotop" title="Back to top"><img src="img/top-arrow.png"  height="50" width="50" alt="back-to-top-img"></button>
   <div class="jumbotron">
-    <img src="music-submission.jpg" width="100%" alt="studio"
+    <img src="img/music-submission.jpg" width="100%" alt="studio"
     class="img-responsive">
   </div>
 </div>
@@ -103,68 +104,24 @@ Submit your song by clicking on the "upload your song here" button, filling the 
     <li>
       Only WAV and 320kbps MP3 is accepted for upload. All other formats are unaccepted.
     </li>
+    <li>
+      All links should be pointing to the profile of the track owner (if possible, directly to the song you submitted).
+    </li>
   </ul>
-<div>
-  <label for="file" class="text-center upload-btn">
-  <input type="file" id="file" accept=".mp3, .wav">
+<form>
+  <label for="file" class="text-center upload-btn" id="file">
     <span>
-    <img src="upload.png">
+    <img src="img/upload.png">
     upload your song here
     </span>
+  <input type="file" id="file" accept=".mp3, .wav">
   </label>
-</div>  
-  <section class="visible-lg visible-md">
-<form class="inner big-input">
-<h3 class="feedback-header">SONG INFO</h3>
-<h5>Song title<span id="compulsory">*</span></h5>
-<div>
-<input type="text" name="Name" label="name" class="input-box" id="song-name">
-</div>
-<h5>Artist<span id="compulsory">*</span></h5>
-<div>
-<input type="name" name="Name" label="Name" class="input-box" id="artist-name">
-</div>
-<h5>Featured Artist(s) (optional)</h5>
-<div>
-<input type="name" name="Name" label="Name" class="input-box" id="featured-artist">
-</div>
-<h5>Genre(s)<span id="compulsory">*</span></h5>
-<div>
-<input type="name" name="Name" label="Name" class="input-box" id="genre">
-</div>
-<h5>Facebook (optional)</h5>
-<div>
-<input type="name" name="Name" label="Name" class="input-box" id="facebook-id">
-</div>
-<h5>YouTube (optional)</h5>
-<div>
-<input type="name" name="Name" label="Name" class="input-box" id="youtube-id">
-</div>
-<h5>Spotify (optional)</h5>
-<div>
-<input type="name" name="Name" label="Name" class="input-box" id="spotify-id">
-</div>
-<h5>Instagram (optional)</h5>
-<div>
-<input type="name" name="Name" label="Name" class="input-box" id="instagram-id">
-</div>
-<h5>Message for the Curators (optional)</h5>
-<div>
-<input type="message" name="Message" label="Message" class="input-box" id="curator-message">
-</div>
-  <div>
-    <button id="submit-song" class="btn btn-secondary form-btn">
-    submit
-  </button>
-  </div>
 </form>
-</section>
-  <section class="input visible-sm visible-xs">
-<form class="inner">
+<form class="inner" id="inner">
 <h3 class="feedback-header">SONG INFO</h3>
 <h5>Song title<span id="compulsory">*</span></h5>
 <div>
-<input type="email" name="Name" label="Name" class="input-box" id="song-name">
+<input type="text" name="Name" label="Name" class="input-box" id="song-name">
 </div>
 <h5>Artist<span id="compulsory">*</span></h5>
 <div>
@@ -204,12 +161,17 @@ Submit your song by clicking on the "upload your song here" button, filling the 
     </button>
   </div>
 </form>
-</section>
-</div>
-<div>
-  <div>
-    Title: 
-  </div>
+<div id="submission-content-box">
+  <div id="song-title"></div>
+  <span id="artiste-name"></span><span id="featured-artiste"></span>
+  <div id="song-genre"></div>
+  <div id="link" class="facebook"></div>
+  <div id="link" class="youtube"></div>
+  <div id="link" class="spotify"></div>
+  <div id="link" class="instagram"></div>
+  <div id="prefix"></div>
+  <div id="curators-message"></div>
+  <div id="notif"></div>
 </div>
 <!--- END BODY --->
 
