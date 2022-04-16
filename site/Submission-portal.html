@@ -86,8 +86,19 @@
 <!--- START BODY --->
 <div id="main-content" class="container">
   <h2 class="text-center" id="category-title">Submission Portal</h2>
-<div><p class="container-fluid"><a href="index.html" title="home">Back to Homepage page.</a></p></div>
+<div>
+  <p class="container-fluid">
+    <a href="index.html" title="home">Back to Homepage page.
+    </a>
+  </p>
+</div>
   <button id="backTotop" title="Back to top"><img src="img/top-arrow.png"  height="50" width="50" alt="back-to-top-img"></button>
+  <div class="lightdark-box hidden-box">
+  <div id="appearance-content" class="appearance-heading">APPEARANCE SETTINGS <span><button class="appearance-cancel-btn"><img src="img/cancel.png" height="10" width="10"></button></span></div>
+  <div id="appearance-content"><button class="btn btn-secondary togggle-btn light-mode">Light Mode</button></div>
+  <br>
+  <div id="appearance-content"><button class="btn btn-secondary togggle-btn dark-mode">Dark Mode</button></div>
+</div>
   <div class="jumbotron">
     <img src="img/music-submission.jpg" width="100%" alt="studio"
     class="img-responsive">
@@ -95,7 +106,7 @@
 </div>
 <h3>
   Wanna get your song featured on our playlist, channel or website?
-Submit your song by clicking on the "upload your song here" button, filling the form below, and submitting it via the "Submit" button. After submission, it'll reviewed by our curators.
+Submit your song by clicking on the "UPLOAD" button, filling the form below, and submitting it via the "Submit" button. After submission, it'll reviewed by our curators.
 </h3>
   <ul class="note-list">NOTE: 
     <li>
@@ -108,15 +119,13 @@ Submit your song by clicking on the "upload your song here" button, filling the 
       All links should be pointing to the profile of the track owner (if possible, directly to the song you submitted).
     </li>
   </ul>
-<form>
-  <label for="file" class="text-center upload-btn" id="file">
-    <span>
-    <img src="img/upload.png">
-    upload your song here
-    </span>
-  <input type="file" id="file" accept=".mp3, .wav">
-  </label>
-</form>
+<input type="file" id="file" accept=".mp3, .wav">
+<div class="upload-content">
+  <button class="text-center upload-btn">
+    <div class="upload-btn-child">UPLOAD</div>
+  </button>
+  <span class="upload-text">No file chosen, yet.</span>
+</div>
 <form class="inner" id="inner">
 <h3 class="feedback-header">SONG INFO</h3>
 <h5>Song title<span id="compulsory">*</span></h5>
@@ -172,6 +181,7 @@ Submit your song by clicking on the "upload your song here" button, filling the 
   <div id="prefix"></div>
   <div id="curators-message"></div>
   <div id="notif"></div>
+  <div id="do-not-reload"></div>
 </div>
 <!--- END BODY --->
 
@@ -193,11 +203,18 @@ Submit your song by clicking on the "upload your song here" button, filling the 
       <hr class="visible-xs">
     </div>
     </section>
+    <section class="col-sm-4
+    ">
+      <div>
+      <button  class="appearance-btn">APPEARANCE SETTINGS</button>
+      <hr class="visible-xs">
+    </div>
+    </section>
     </div>
     <div class="text-center">
-          <div class="visible-xs" id="headerandfooter">Kings Music 2021 &copy; Copyright</div>
+          <div class="visible-xs" id="headerandfooter">Kings Music 2022 &copy; Copyright</div>
     </div>
-    <div class="visible-sm visible-md visible-lg" id="headerandfooter">Kings Music 2021 &copy; Copyright</div>
+    <div class="visible-sm visible-md visible-lg" id="headerandfooter">Kings Music 2022 &copy; Copyright</div>
   </div>
 </footer>
 <!--- END FOOTER --->

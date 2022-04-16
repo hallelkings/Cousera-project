@@ -3,7 +3,6 @@
 	body {
 		font-family: 'Nunito', sans-serif;
 		padding: 5px;
-		background-color: white;
 		width: auto;}
 	body a{color: black;
 		background-color: orange;}
@@ -135,6 +134,67 @@ h2 {
 }
 /** END PRELOADER **/
 
+/** START LIGHT/DARK MODE **/
+	.darkmode {
+		background: #28282B;
+		color: white;
+	}
+/** END LIGHT/DARK MODE **/
+
+/** START APPEARANCE SETTINGS **/
+	.lightdark-box {
+		background-color: #28282B;
+		width: 220px;
+		border: 5px black;
+		box-shadow: 0 0 15px black;
+		top: 50%;
+ 		left: 50%;
+		position: fixed;
+ 		transform: translate(-50%, -50%);
+ 		z-index: 999999;
+	}
+
+	.hidden-box {
+
+	}
+
+	.show-me {
+		display: all;
+	}
+
+	#appearance-content {
+		text-align: center;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.appearance-heading {
+		font-weight: bolder;
+		background-color: gray;
+		border: 3px #28282B;
+		padding-bottom: 5px;
+	}
+
+	.togggle-btn {
+		margin-bottom: 5px;
+		padding-top: 5px;
+	}
+
+	.appearance-btn {
+		border: dashed 1px black;
+		color: black;
+	}
+
+	.appearance-btn:active {
+		background-color: gray;
+	}
+
+	.appearance-cancel-btn {
+		margin-left: 13px;
+		margin-top: 3px;
+	}
+/** END APPEARNCE SETTINGS **/
+
 /** START HEADER **/
 	#header-nav {border: 0;
 		border-radius: 0;
@@ -146,7 +206,8 @@ h2 {
 		background-color: transparent;
 		float: right;
 		font-size: 18px;
-		clear: right;}
+		clear: right;
+		margin-bottom: 5px;}
 	.navbar-brand {width: 50%;}				
 	#headerandfooter {color: black;
 		text-shadow: 1px black;
@@ -154,6 +215,7 @@ h2 {
 		margin-bottom: 1%;
 		margin-left: 5px;}
 	#quote {margin-left: 5px;}
+	.btn {color: black;}
 	#email-btn {
 		width: 65px;
 		text-align: center;
@@ -203,16 +265,29 @@ h2 {
 	.icon-link, .icon-link:hover, .icon-link:active {background-color: transparent;
 		color: black;
 		margin-left: 10px;}
-	.note-list {margin-bottom: 20px;}	
-	input[type="file"] {
-		display: none;}
-	label {
+	.note-list {margin-bottom: 20px;}
+	#file {
+		display: none;
+	}
+	.upload-content {
 		position: absolute;
-		margin: auto;
-		left: 0;
-		right: 0;
-		text-shadow: 0 0 15px;
-		width:33%;
+		margin-left: 40%;
+	}
+	.upload-btn {
+		background-color: orange;
+		height: 40px;
+		position: relative;
+		width: 70px;
+		border: 1px;
+		box-shadow: 0 0 3px black;
+	}
+	.upload-btn:active {
+		box-shadow: 0 0 7px black;
+	}
+	.upload-btn-child {
+		position: relative;
+		margin-top: 0%;
+		font-weight:700;
 	}
 	.input {
 		margin: 15px;
@@ -292,7 +367,7 @@ h2 {
 		font-weight: bold;
 		color: white;
 		margin-left: 20px;
-		width: 33px;
+		width: 54px;
 	}
 	.not-submitted-notif {
 		background-color: red;
@@ -319,7 +394,10 @@ h2 {
 		position: fixed;
 		border: none;
 		right: 7px;
-		bottom: 30px;}
+		bottom: 30px;
+		background-color: transparent;
+		z-index: 999999;
+	}
 
 /** END BODY **/
 

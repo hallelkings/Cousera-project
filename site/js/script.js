@@ -321,6 +321,41 @@ $(function () { //Same as document.addEventListener("DOMContentLoaded", ...)
 
 /*Fixing Mobile Nav Menu Collapse - Ends*/
 
+/* Appearance Setting Function Integration - Starts */
+var appearanceMode = document.querySelector(".appearance-btn");
+var appearanceModalbox = document.querySelector(".hidden-box");
+	appearanceModalbox.classList.add("hide-me");
+
+appearanceMode.addEventListener("click", function () {
+	var appearanceModalbox = document.querySelector(".hidden-box");
+	appearanceModalbox.classList.remove("hide-me");
+});
+
+var cancelButton = document.querySelector(".appearance-cancel-btn");
+
+cancelButton.addEventListener("click", function () {
+	var appearanceModalbox = document.querySelector(".hidden-box");
+	appearanceModalbox.classList.add("hide-me");
+});
+/* Appearance Setting Functionality Integration - Ends */
+
+/*Adding Functionality To Dark/Light Mode Toggle - Starts*/
+
+var darkMode = document.querySelector(".dark-mode");
+
+darkMode.addEventListener("click", function () {
+	 body = document.body;
+	 body.classList.add("darkmode");
+});
+
+var lightMode = document.querySelector(".light-mode");
+
+lightMode.addEventListener("click", function () {
+	 body = document.body;
+	 body.classList.remove("darkmode");
+});
+/*Adding Functionality To Dark/Light Mode Toggle - Ends*/
+
 // END HEADER
 
 // START BODY
@@ -353,7 +388,8 @@ document.addEventListener("DOMContentLoaded",
 	if (navigator.onLine === true) {
 		document.querySelector(".inner").action = "https://formspree.io/f/xnqwakal";
 		notif.classList.add("submitted-notif");
-		notif.innerHTML = "sent";
+		notif.innerHTML = "sending";
+		document.getElementById("do-not-reload").innerHTML = "Please do not reload your browser..."
 		console.log("I am Online");
 	} 
 	else {
@@ -405,7 +441,8 @@ document.addEventListener("DOMContentLoaded",
 			// Form Validation - Begins
 			if (document.getElementById("song-name").value === null || document.getElementById("song-name").value === "") {
 				alert("Please input the Title of your Track");
-				 	
+				event.preventDefault();
+				return(false);	
 			}
 			else if (document.getElementById("artist-name").value === null || document.getElementById("artist-name").value === "") {
 				alert("Please input the Stage Name of you or the Artist you're Legally representing");
@@ -480,8 +517,9 @@ document.addEventListener("DOMContentLoaded",
 				else {document.getElementById("prefix").innerHTML = "Message:"};
 
 			if (navigator.onLine === true) {
-				document.getElementById("notif").innerHTML = "sent"
+				document.getElementById("notif").innerHTML = "sending"
 				document.getElementById("notif").classList.add("submitted-notif")
+				document.getElementById("do-not-reload").innerHTML = "Please do not reload your browser..."
 			} 
 			else {
 				document.getElementById("notif").innerHTML = "not sent"
@@ -500,5 +538,22 @@ if (window.innerWidth < 992) {
 	songBox.classList.add("input")
 }
 else {songBox.classList.add("big-input")};
-/*Music Submission Form - rEnd*/
+/*Music Submission Form - End*/
 
+/*Integrating File Upload Button - Begins*/
+var fileUpload = document.querySelector("#file");
+var fileUploadbutton = document.querySelector(".upload-btn");
+var fileUploadtext = document.querySelector(".upload-text");
+
+fileUploadbutton.addEventListener("click", function () {
+	fileUpload.click();
+});
+
+fileUpload.addEventListener("change", function () {
+	if (fileUpload.value) {
+		fileUploadtext.innerHTML = fileUpload.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+	} else {
+		fileUploadtext.innerHTML = "No file chosen, yet."
+	}
+});
+/*Integrating File Upload Button - Ends*/
